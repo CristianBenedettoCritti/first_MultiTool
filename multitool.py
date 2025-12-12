@@ -8,6 +8,15 @@ import sys
 import argparse
 
 
+# Calculator operations
+CALC_OPERATIONS = {
+    'add': lambda x, y: x + y,
+    'subtract': lambda x, y: x - y,
+    'multiply': lambda x, y: x * y,
+    'divide': lambda x, y: x / y if y != 0 else "Error: Division by zero"
+}
+
+
 def text_upper(text):
     """Convert text to uppercase"""
     return text.upper()
@@ -25,18 +34,11 @@ def text_reverse(text):
 
 def calculate(operation, num1, num2):
     """Perform basic calculations"""
-    operations = {
-        'add': lambda x, y: x + y,
-        'subtract': lambda x, y: x - y,
-        'multiply': lambda x, y: x * y,
-        'divide': lambda x, y: x / y if y != 0 else "Error: Division by zero"
-    }
-    
-    if operation not in operations:
+    if operation not in CALC_OPERATIONS:
         return f"Error: Unknown operation '{operation}'"
     
     try:
-        result = operations[operation](float(num1), float(num2))
+        result = CALC_OPERATIONS[operation](float(num1), float(num2))
         return result
     except ValueError:
         return "Error: Invalid numbers provided"
