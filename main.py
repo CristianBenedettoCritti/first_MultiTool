@@ -28,6 +28,7 @@ while True:
         r = requests.get(f"http://ip-api.com/json/{ip}")
         data = r.json()
         if data.get("status") == "success":
+            print(logo)
             print(f"Results for {data['query']}\n")
             print(f" Country: {data['country']}")
             print(f"  Region: {data['regionName']}")
@@ -37,12 +38,14 @@ while True:
             print(f"TimeZone: {data['timezone']}")
             print("")
         else:
+            print(logo)
             print(f"Failed to load: {ip}\n")
         pause = input("Press enter to return...")
 
     if x == "2":
         os.system("cls")
         def scan_port():
+            print(logo)
             target = input("Enter IP: ")
             port_range = input("Enter Port Range: ")
             try:
@@ -53,6 +56,7 @@ while True:
                 print("Invalid format. Please use 'start-end' (e.g., 20-80).")
                 return
             os.system("cls")
+            print(logo)
             print(f"Scanning {target} from port {start_port} to {end_port}...\n")
 
             for port in range(start_port, end_port + 1):
@@ -67,4 +71,5 @@ while True:
 
     if x == "3":
         os.system("cls")
+        print(logo)
         token = input("Enter Token: ")
