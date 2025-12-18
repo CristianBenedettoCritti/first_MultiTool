@@ -15,7 +15,7 @@ while True:
     print(logo)
     print("[1] IP Lookup")
     print("[2] Webhook")
-    print("[3] generate")
+    print("[3] token")
     print("")
     x = input("Option: ")
 
@@ -26,12 +26,21 @@ while True:
         os.system("cls")
         r = requests.get(f"http://ip-api.com/json/{ip}")
         data = r.json()
-        print(f"RESULTS\n")
-        print(f"Country: {data['country']}")
-        print(f"City: {data['city']}")
-        print(f"Region: {data['region']}")
-        print(f"TimeZone: {data['timezone']}")
-        print("")
-        pause = input("Press enter to return...")
+        if data.get("status") == "success":
+            print(f"Results for {data['query']}\n")
+            print(f"Country: {data['country']}")
+            print(f"City: {data['city']}")
+            print(f"Region: {data['region']}")
+            print(f"TimeZone: {data['timezone']}")
+            print("")
+        else:
+            print(f"Failed to load: {ip}\n")
+    pause = input("Press enter to return...")
 
-    if x == "2"
+    if x == "2":
+        os.system("cls")
+        webhook = input("Enter Webhook: ")
+
+    if x == "3":
+        os.system("cls")
+        token = input("Enter Token: ")
