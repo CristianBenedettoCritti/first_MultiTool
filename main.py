@@ -22,6 +22,7 @@ while True:
 
     if x == "1":
         os.system("cls")
+        print(logo)
         print("IP LOOKUP\n")
         ip = input("Enter IP: ")
         os.system("cls")
