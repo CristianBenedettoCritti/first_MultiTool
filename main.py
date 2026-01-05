@@ -54,8 +54,10 @@ while True:
                 start_port = int(start_port)
                 end_port = int(end_port)
             except ValueError:
+                os.system("cls")
+                print(logo)
                 print("Invalid format. Please use 'start-end' (e.g., 20-80).")
-                return
+                pause = input("\nPress enter to return...")
             os.system("cls")
             print(logo)
             print(f"Scanning {target} from port {start_port} to {end_port}...\n")
