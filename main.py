@@ -16,7 +16,6 @@ while True:
     print(logo)
     print("[1] IP Lookup")
     print("[2] Port reader")
-    print("[3] token")
     print("")
     x = input("Option: ")
 
