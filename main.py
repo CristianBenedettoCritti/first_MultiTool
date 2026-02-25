@@ -36,7 +36,7 @@ while True:
     print(logo)
     print("[1] IP Lookup")
     print("[2] Port reader")
-    print("[3] Discord Mass DM/Message")
+    print("[3] Discord DM/Message Spammer")
     print("")
     x = input("Option: ")
 
