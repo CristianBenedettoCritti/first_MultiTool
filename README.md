@@ -17,3 +17,16 @@ The **Port Scanner** function identifies open ports on a target IP by creating a
 The **Discord Message Spammer** allows you to input one or more account tokens, which are saved to a `token.txt` file for repeated use. You can customize the message and set a repetition count (e.g., if set to 5, every token will send the message 5 times).
 
 To use this, you must provide a **Channel ID** and an optional **Server ID**. Future updates may include a proxy list integration to automatically bypass rate limiting.
+
+---
+
+## Getting Started
+
+1. **Installation**: Ensure you have Python installed on your system.
+2. **Setup**: Run the main script to generate the necessary configuration files.
+3. **Tokens**: Add your Discord tokens to the `token.txt` file (one per line).
+4. **Execution**: Follow the on-screen menu prompts to select a tool and enter the required target information.
+
+## Disclaimer
+
+This tool is created for **educational purposes only**. The developer is not responsible for any misuse, damage, or legal consequences caused by this software. Use this tool ethically and only on networks or accounts you have permission to test.
