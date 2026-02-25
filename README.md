@@ -1,6 +1,6 @@
 <p align="center">
-  <h1>🛠️ first_MultiTool 🛠️</h1>
-  Welcome to <b>first_MultiTool</b>, a versatile toolkit for network exploration and automation. 🚀
+  <h1>first_MultiTool</h1>
+  Welcome to <b>first_MultiTool</b>, a versatile toolkit for network exploration and automation.
 </p>
 
 ---
@@ -13,7 +13,7 @@
 
 ---
 
-## 🔌 Available Tools
+## Available Tools
 
 ### 🔍 IP Lookup
 
