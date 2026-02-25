@@ -6,8 +6,11 @@ Welcome to **first_MultiTool**, a versatile toolkit for network exploration and 
 
 ## 📸 Preview
 
-![Tool Interface](./preview.png)
-_Behold the interface in all its glory!_ ✨
+<p align="center">
+  <img src="./preview.png" width="500" alt="Tool Interface">
+  <br>
+  <i>✨ Behold the interface in all its glory! ✨</i>
+</p>
 
 ---
 
@@ -47,4 +50,4 @@ Automate messaging using multiple account tokens stored in `token.txt`.
 
 ## 📜 Disclaimer
 
-This project is for **educational purposes only**. The developer is not responsible for any misuse or legal consequences. Use responsibly and only on systems you own or have permission to test. ⚖️
+This project is for **educational purposes only**. The developer is not responsible for any misuse or legal consequences. Use responsibly and only on systems you own or have permission to test.
