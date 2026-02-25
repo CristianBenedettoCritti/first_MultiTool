@@ -1,32 +1,50 @@
-# first_MultiTool
+# 🛠️ first_MultiTool
 
-## Tools
-
-### IP Lookup
-
-The **IP Lookup** function allows you to retrieve location and network data for a specific IP address by querying `ip-api.com/json/{ip}`.
-
-### Port Scanner
-
-The **Port Scanner** function identifies open ports on a target IP by creating a socket and attempting to connect across a specified port range.
-
-> **Note:** Please use a VPN if you wish to remain anonymous; otherwise, your IP address will be visible to the target.
-
-### Discord Message Spammer
-
-The **Discord Message Spammer** allows you to input one or more account tokens, which are saved to a `token.txt` file for repeated use. You can customize the message and set a repetition count (e.g., if set to 5, every token will send the message 5 times).
-
-To use this, you must provide a **Channel ID** and an optional **Server ID**. Future updates may include a proxy list integration to automatically bypass rate limiting.
+Welcome to **first_MultiTool**, a versatile toolkit for network exploration and automation. 🚀
 
 ---
 
-## Getting Started
+## 🔌 Tools
 
-1. **Installation**: Ensure you have Python installed on your system.
-2. **Setup**: Run the main script to generate the necessary configuration files.
-3. **Tokens**: Add your Discord tokens to the `token.txt` file (one per line).
-4. **Execution**: Follow the on-screen menu prompts to select a tool and enter the required target information.
+### 🔍 IP Lookup
 
-## Disclaimer
+Retrieve location and network metadata for a specific IP address by querying `ip-api.com`.
 
-This tool is created for **educational purposes only**. The developer is not responsible for any misuse, damage, or legal consequences caused by this software. Use this tool ethically and only on networks or accounts you have permission to test.
+- **Method:** JSON API query
+- **Data:** Geo-location, ISP, and ASN information.
+
+### 🔓 Port Scanner
+
+Identify open ports on a target IP by creating a socket connection across a custom port range.
+
+> ⚠️ **Security Tip:** Use a VPN to remain anonymous; otherwise, your local IP will be logged by the target.
+
+### 💬 Discord Spammer
+
+Automate messaging using multiple account tokens stored in `token.txt`.
+
+- **Customizable:** Set message content and repetition count.
+- **Targeting:** Requires a **Channel ID** and optional **Server ID**.
+- **Upcoming:** Proxy list integration for rate-limit bypassing.
+
+---
+
+## 📸 Preview
+
+![Tool Interface](./preview.png)
+_Behold the interface in all its glory!_
+
+---
+
+## 🚀 Getting Started
+
+1.  **Installation**: Ensure you have Python 3.x installed.
+2.  **Setup**: Run the main script to generate the `token.txt` file.
+3.  **Config**: Paste your tokens into the file (one per line).
+4.  **Launch**: Follow the interactive menu prompts.
+
+---
+
+## 📜 Disclaimer
+
+This project is for **educational purposes only**. The developer is not responsible for any misuse or legal consequences. Use responsibly and only on systems you own or have permission to test. ⚖️
