@@ -1,10 +1,17 @@
-# 🛠️ first_MultiTool
+# 🛠️ first_MultiTool 🛠️
 
 Welcome to **first_MultiTool**, a versatile toolkit for network exploration and automation. 🚀
 
 ---
 
-## 🔌 Tools
+## 📸 Preview
+
+![Tool Interface](./preview.png)
+_Behold the interface in all its glory!_ ✨
+
+---
+
+## 🔌 Available Tools
 
 ### 🔍 IP Lookup
 
@@ -25,14 +32,7 @@ Automate messaging using multiple account tokens stored in `token.txt`.
 
 - **Customizable:** Set message content and repetition count.
 - **Targeting:** Requires a **Channel ID** and optional **Server ID**.
-- **Upcoming:** Proxy list integration for rate-limit bypassing.
-
----
-
-## 📸 Preview
-
-![Tool Interface](./preview.png)
-_Behold the interface in all its glory!_
+- **Upcoming:** Proxy list integration for rate-limit bypassing. 🛡️
 
 ---
 
