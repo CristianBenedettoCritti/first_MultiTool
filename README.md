@@ -19,22 +19,43 @@
 
 Retrieve location and network metadata for a specific IP address by querying `ip-api.com`.
 
-- **Method:** JSON API query
+- **Method:** JSON API query.
 - **Data:** Geo-location, ISP, and ASN information.
 
 ### 🔓 Port Scanner
 
 Identify open ports on a target IP by creating a socket connection across a custom port range.
 
-> ⚠️ **Security Tip:** Use a VPN to remain anonymous; otherwise, your local IP will be logged by the target.
+- **Security Tip:** Use a VPN to remain anonymous; otherwise, your local IP will be logged by the target.
 
-### 💬 Discord Spammer
+### 🛡️ Discord Token Checker
+
+Validate your list of Discord tokens to ensure they are active and not disabled.
+
+- **Automation:** Mass-check tokens stored in `token.txt`.
+- **Feedback:** Real-time status reporting (Valid/Invalid/Locked).
+
+### 🧨 Discord Account Nuker
+
+A powerful automation utility for account management.
+
+- **Functions:** Mass-leave servers, delete friends, and toggle account settings.
+- **Note:** Requires a valid User Token to execute commands.
+
+### 💬 Discord DM/Message Spammer
 
 Automate messaging using multiple account tokens stored in `token.txt`.
 
 - **Customizable:** Set message content and repetition count.
 - **Targeting:** Requires a **Channel ID** and optional **Server ID**.
 - **Upcoming:** Proxy list integration for rate-limit bypassing. 🛡️
+
+### 🪝 Webhook Message Spammer
+
+Send high-speed automated messages to any Discord channel using a Webhook URL.
+
+- **Efficiency:** Does not require account tokens.
+- **Speed:** Capable of rapid-fire messaging until rate-limited.
 
 ---
 
