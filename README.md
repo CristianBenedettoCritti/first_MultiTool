@@ -32,7 +32,7 @@ Identify open ports on a target IP by creating a socket connection across a cust
 
 Validate your list of Discord tokens to ensure they are active and not disabled.
 
-- **Automation:** Mass-check tokens stored in `token.txt`.
+- **Automation:** Mass-check tokens.
 - **Feedback:** Real-time status reporting (Valid/Invalid/Locked).
 
 ### 🧨 Discord Account Nuker
