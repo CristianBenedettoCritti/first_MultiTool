@@ -62,9 +62,8 @@ Send high-speed automated messages to any Discord channel using a Webhook URL.
 ## 🚀 Getting Started
 
 1.  **Installation**: Ensure you have Python 3.x installed.
-2.  **Setup**: Run the main script to generate the `token.txt` file.
-3.  **Config**: Paste your tokens into the file (one per line).
-4.  **Launch**: Follow the interactive menu prompts.
+2.  **Setup**: Download and unzip the folder and open main.py
+3.  **Launch**: Follow the interactive menu prompts.
 
 ---
 
