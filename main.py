@@ -467,10 +467,9 @@ while True:
             print(f"[1] Add Tokens      (Loaded: {len(current_tokens)})")
             print(f"[2] Set Message     (Current: {discord_config['message']})")
             print(f"[3] Set Repeat Count(Current: {discord_config['count']})")
-            print(f"[4] Set Server ID   (Current: {discord_config['server_id']})")
-            print(f"[5] Set Channel ID  (Current: {discord_config['channel_id']})")
+            print(f"[4] Set Channel ID  (Current: {discord_config['channel_id']})")
             print("")
-            print("[6] \033[92mSTART SENDING\033[0m")
+            print("[5] \033[92mSTART SENDING\033[0m")
             print("[0] Back to Main Menu")
             print("----------------------------------")
             
@@ -498,12 +497,9 @@ while True:
                     time.sleep(1)
 
             elif sub_choice == "4":
-                discord_config["server_id"] = input("Enter Server ID: ")
-
-            elif sub_choice == "5":
                 discord_config["channel_id"] = input("Enter Channel ID: ")
 
-            elif sub_choice == "6":
+            elif sub_choice == "5":
                 if not current_tokens or discord_config["channel_id"] == "Not Set":
                     print("\n\033[91mError: You need at least one token and a Channel ID!\033[0m")
                     time.sleep(2)
