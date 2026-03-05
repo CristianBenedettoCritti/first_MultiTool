@@ -3,6 +3,7 @@ import os
 import socket
 import time
 import datetime
+import threading
 
 TOKEN_FILE = "tokens.txt"
 
@@ -503,19 +504,17 @@ while True:
                 discord_config["channel_id"] = input("Enter Channel ID: ")
 
             elif sub_choice == "6":
-                
                 if not current_tokens or discord_config["channel_id"] == "Not Set":
                     print("\n\033[91mError: You need at least one token and a Channel ID!\033[0m")
                     time.sleep(2)
                 else:
+                    import threading
+
                     os.system("cls")
                     print(logo)
-                    print(f"Starting process with {len(current_tokens)} tokens...")
-                    print(f"Repeating {discord_config['count']} times per token.\n")
+                    print(f"Starting the spamm with {len(current_tokens)} tokens...")
                     
-                    for token_idx, token in enumerate(current_tokens):
-                        print(f"--- Using Token {token_idx + 1} ---")
-                        
+                    def send_messages(token, token_num):
                         for i in range(discord_config["count"]):
                             url = f"https://discord.com/api/v9/channels/{discord_config['channel_id']}/messages"
                             headers = {"Authorization": token, "Content-Type": "application/json"}
@@ -523,23 +522,31 @@ while True:
                             
                             try:
                                 r = requests.post(url, headers=headers, json=payload)
-                                if r.status_code == 200:
-                                    print(f"   [{i+1}/{discord_config['count']}] Sent: SUCCESS")
-                                else:
-                                    print(f"   [{i+1}/{discord_config['count']}] Failed: {r.status_code}")
+                                status = "SUCCESS" if r.status_code == 200 else f"Failed: {r.status_code}"
+                                print(f"[Token {token_num}] Message {i+1}: {status}")
                             except Exception as e:
-                                print(f"   Error: {e}")
+                                print(f"[Token {token_num}] Error: {e}")
                             
                             time.sleep(0.3)
-                        
-                        print("")
-                        
-                    print("All done!")
+
+                    threads = []
+                    for idx, token in enumerate(current_tokens):
+                        t = threading.Thread(target=send_messages, args=(token, idx + 1))
+                        threads.append(t)
+                        t.start()
+                        time.sleep(0.1)
+
+                    try:
+                        for t in threads:
+                            t.join()
+                    except KeyboardInterrupt:
+                        print("\n\nStopping threads... please wait.")
+
+                    print("\nAll tokens have finished sending!")
                     input("Press enter to continue...")
 
             elif sub_choice == "0":
                 break
-
 
     elif x == "6":
         while True:
